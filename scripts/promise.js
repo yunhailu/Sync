@@ -26,11 +26,11 @@
             });
             return def.promise();
         }
-        // getList01().then(function(data){
+        // getList01().then(data => {
         //     console.log('getList01: ', data);
         //     const users = data.respData.list;
         //     Util.template('.users', 'users', users);
-        // },function(err){});
+        // }, err => {});
 
 
         /**
@@ -44,8 +44,7 @@
                 jsonp: 'callback'
             });
         }
-        // getList02().then(function(data){
-        //     //console.log('getList02: ', data);
+        // getList02().then(data => {
         //     Util.template('#users', 'users', data.respData.list);
         // });
 
@@ -61,13 +60,13 @@
                 jsonp: 'callback'
             });
         }
-        // var users = [];
-        // getList02().then(function(data){
+        // let users = [];
+        // getList02().then(data => {
         //     users = data.respData.list;
         //     return getAvatar();
-        // }).then(function(resp){
-        //     var avatars = resp.respData.list;
-        //     users = _.map(users, function(user, index){
+        // }).then(resp => {
+        //     const avatars = resp.respData.list;
+        //     users = _.map(users, (user, index) => {
         //         user.avatar = avatars[index].avatar;
         //         return user;
         //     });
@@ -102,7 +101,7 @@
                 });
             });
         }
-        // var users = new Array();
+        // let users = new Array();
         // getList03().then(data => {
         //     users = data.respData.list;
         //     return getAvatar02();
@@ -114,7 +113,6 @@
         //     });
         //     Util.template('#users', 'users', users);
         // });
-
 
     });
 })($, _);
